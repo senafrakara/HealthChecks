@@ -11,10 +11,12 @@ namespace HealthChecks.Models
     {
         [Key]
         [Column(TypeName = "varchar(35)")]
-        public string _EmailAddress { get; set; }
+        [DataType(DataType.EmailAddress)]
+        public string EmailAddress { get; set; }
         public int UserId { get; set; } //User tablosu db de user şeklinde geçmiyor!!!
-        public string URL { get; set; }
-        public List<URL> URL_List { get; set; }
+       // public string _URL { get; set; }
+        public ICollection<URL_EMAIL> URL_EMAIL_LIST { get; set; }
 
     }
 }
+

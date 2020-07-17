@@ -11,9 +11,14 @@ namespace HealthChecks.Models
     {
         [Key]
         [Column(TypeName ="varchar(150)")]
-        public string _URL { get; set; }
+        public string Url { get; set; }
         [Key]
         public int UserId { get; set; } //it indexed with Id which is pk of User tbl automatically
-        public List<Email> Email_List { get; set; }
+        public int Time { get; set; }
+
+        public ICollection<URL_EMAIL> URL_EMAIL_LIST { get; set; }
+
+        
     }
 }
+

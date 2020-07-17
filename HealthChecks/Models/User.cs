@@ -9,8 +9,9 @@ namespace HealthChecks.Models
     public class User : IdentityUser
     {
         
-        public int Id { get; set; } //how to override a key
+        public int UserId { get; set; } //how to override a key
         public List<URL> URL_List{ get; set; }
 
     }
 }
+
